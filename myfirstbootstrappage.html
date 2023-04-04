@@ -1,0 +1,157 @@
+<!--I started by using Bootstrap Studio, but moved to just writing the code as it was much easier...
+So, there are a few lines that the app put in, and it is a little messy-->
+
+
+<!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
+<html lang="en">
+
+<!--Found here, just so Add to cart does something to another grid section: 
+    https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webstorage_local_clickcount-->
+
+    <script>
+        function clickCounter() {
+          if (typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+              localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+              localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = '<p><br>Items in cart: </p>' + localStorage.clickcount;
+          } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+          }
+        }
+        </script>
+
+<!--BS stuff-->
+<head>
+    <title>***** churers chairs 4 you *****</title>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles2.css' %}">
+    
+
+</head>
+
+<body class="fs-4 text-center">
+   
+<!--Container for max-width-->      
+    <div class="container">
+
+<!--First row. Cart col updated by script above-->         
+        <div class="row">
+            <div class="col-4" ><p><br>Welcome</p></div>
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/Churers%20logo.png' %}" width="100%"></div>
+            <div class="col-4" id="result"><p><br>Items in cart: </p></div>
+
+<!--Rows and cols for the 12 items-->
+<!--Hover*opacity image, hover*reveal price name, (hidden) price, add to cart button-->            
+        <div class="row">
+
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/queen%20consort.png' %}" width="100%">
+                <div class="centered">consort<br></div>
+                <div class="hide"><em>$699</em><br></div>
+                <div class="buttons">
+                <button type="button" onclick="clickCounter()" width="100%">Add to cart</button>
+                </div>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/sentient.png' %}" width="100%">
+                <div class="centered">sentient<br></div>
+                <div class="hide"><em>$429</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/sharent.png' %}" width="100%">
+                <div class="centered">sharent<br></div>
+                <div class="hide"><em>$679</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>    
+        </div>
+
+        <div class="row">
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/nomophobia.png' %}" width="100%">
+                <div class="centered">nomophobia<br></div>
+                <div class="hide"><em>$299</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/omicron.png' %}" width="100%">
+                <div class="centered">omicron<br></div>
+                <div class="hide"><em>$359</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/permacrisis.png' %}" width="100%">
+                <div class="centered">permacrisis<br></div>
+                <div class="hide"><em>$599</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/goblin%20mode.png' %}" width="100%">
+                <div class="centered">goblin<br></div>
+                <div class="hide"><em>$599</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/hellacious.png' %}" width="100%">
+                <div class="centered">hellacious<br></div>
+                <div class="hide"><em>$209</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/loamy.png' %}" width="100%">
+                <div class="centered">loamy<br></div>
+                <div class="hide"><em>$299</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+        </div>
+          
+        <div class="row">
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/awe%20walk.png' %}" width="100%">
+                <div class="centered">awe-walk<br></div>
+                <div class="hide"><em>$589</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/codify.png' %}" width="100%">
+                <div class="centered">codify<br></div>
+                <div class="hide"><em>$709</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="{% static 'assets/img/glow-up.png' %}" width="100%">
+                <div class="centered">glow-up<br></div>
+                <div class="hide"><em>$369</em><br></div>
+                <button type="button" onclick="clickCounter()">Add to cart</button>
+            </div>
+        </div>
+
+<!--1 col for form (action/post does not do anything yet), 1 col for small logo-->   
+        <div class="row" >
+            <div class="col-6">
+                
+            <form action="/action_page.php" method="post">
+                <em>If you have any questions, please leave your contact details below:<br></em>
+                <label> Name: </label>
+                <input type = "text" name = "name"><br>
+                <label> Email:</label>
+                <input type = "text" name = "email"><br>
+                <label> Message:</label>
+                <input type = "text" name = "message"><br>
+                <input type="submit" value="Submit" name = submit>
+            </form>
+            <br>
+            </div>
+            <div class="col-6">
+                <img class="img-fluid" src="{% static 'assets/img/Churers%20logo.png' %}" width="50%" >
+                
+            <br>
+            </div>
+        </div>
+    </div>
+
+<!--BS stuff-->   
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

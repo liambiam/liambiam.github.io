@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
+<html>
+
+<!-- heading -->
+<head>
+    <title>I miss Python</title>
+    <link href = "{% static 'styles/style1.css' %}" rel = "stylesheet" type = "text/css">
+
+<!-- a little internal CSS styling practice -->
+    <style>
+
+        * {
+        box-sizing: border-box;
+        }
+
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+
+            <img src="{% static 'images/liam.jpeg' %}" alt="liam" class="responsive"> 
+    <!-- responsive top image and intro text with ids for CSS-->
+        <div id="welcome">
+            <h1>liambiam
+        </div>
+        <div id="jobtitle-quote">
+            aspiring software engineer<br><br>
+            <em>'In the souls of the people, the grapes of wrath are filling and growing heavy, growing heavy for the vintage'</em><br><br>
+            </h1> 
+        </div>        
+        
+    <!-- responsive 3x images using CSS-->
+        <div class="row">
+            
+            <div class="column">
+            <img src="{% static 'images/charlie.jpg' %}" alt="Charleston" style="width:100%">
+            </div>
+            <div class="column">
+            <img src="{% static 'images/candl.jpeg' %}" alt="Charles and Liam" style="width:100%">
+            </div>
+            <div class="column">
+            <img src="{% static 'images/charlie2.jpg' %}" alt="Charlie" style="width:100%">
+            </div>
+        </div> 
+        
+    <!-- list of links to each section-->
+        <div class="topnav">
+        <ul>
+            
+            <li class="topic-selector"><a href = "#About me">| About me |</a></li>
+            <li class="topic-selector"><a href = "#Contact details">| Contact details |</a></li>
+            <li class="topic-selector"><a href = "#S&C">| Skills & Competencies |</a></li>
+            <li class="topic-selector"><a href = "#Education">| Education |</a></li>
+            <li class="topic-selector"><a href = "#Work experience">| Work experience |</a></li>
+            <li class="topic-selector"><a href = "#Projects">| Projects |</a></li>
+            <li class="topic-selector"><a href = "#Blogs">| Blogs |</a></li>
+            <li class="topic-selector"><a href = "#Logbook">| Visitor Logbook |</a></li>
+        </ul>
+        </div>
+        
+    <!-- paragraphs, line breaks, bold, and italics -->
+        <h3 id = "About me"><b>About me</b></h3>
+        
+        <div class="about-grid1">
+            <div class="history">
+                <em>A potted history</em>
+                <p>I was born in a busy Suffolk town and my early years were spent living by the sea. My family moved to a small village in Norfolk just before I started
+                    primary school. We lived in the middle of a forest, which had many secret paths, babbling brooks, and wild places to explore. My time at high school
+                    was where I developed a keen interest in science - gaining an understanding of how the world worked, and I went on to a college to begin my science education 
+                    in earnest. I decided to move up north for university - Durham, and pursued a degree in Natural Science but, as my full-time education began to end, I had 
+                    a hankering for exploration. I spent several years exploring the world, while teaching English. I developed a passion for this career, and decided to combine 
+                    both science and education. Having worked in education for many years, I felt that I was ready for a new adventure in computing, where I am able to combine all
+                    of my strengths: problem-solving, creativity, logic, science, maths, and focus.
+                </p>
+            </div>
+
+            <div class="goalsandhobbies-grid">
+                <div class="goals">
+                    <em>2023 Goals</em>
+                    <ul>
+                        <li>Complete HyperionDev bootcamp</li>
+                        <li>Get a job in Software Engineering</li>
+                        <li>Start a Masters in A.I.</li>
+                        <li>Complete as many computing courses as possible</li>
+                        <li>Build my own website</li>
+                        <li>Create my own game</li>
+                        <li>Develop a portfolio of projects on GitHub</li>
+                        <li>Run a sub 25 minute 5km</li>
+                        <li>Run a 10km non-stop</li>            
+                    </ul>
+                </div>
+
+                <div class="hobbies">
+                    <em>Hobbies</em>
+                    <p>Gardening, gaming, golf, cooking and baking, hiking, playing the piano and guitar, 
+                        composing and transcribing music, reading, conservation, snooker, travelling, chess</p>
+                </div>
+            </div>
+
+            
+        </div>
+
+    <!-- using #top to return to top of page -->        
+            <br><a href = "#top">Back to top</a><br>
+        
+    <!-- table, link to open email client and populate 'mailto', links to external websites -->
+        <h3 id = "Contact details"><b>Contact details</b></h3>
+        
+        <table class="contact-table">
+            <tbody>
+                <tr>
+                <td></td>
+                <td><em>Personal</em></td>
+                <td><em>Work</em></td>
+                </tr>
+            <tr>
+                <td><em>Phone:</em></td>
+                <td>07123 456 789</td>
+                <td>01098 765 432</td>
+            </tr>
+            <tr>
+                <td><em>Email</em></td>
+                <td><a href="mailto:liambiam@gmail.com">liambiam@gmail.com</a></td>
+                <td><a href="mailto:liamserious@gmail.com">liamserious@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><em>Socials</em></td>
+                <td><a href="https://www.instagram.com" target = "_blank">Instagram</a></td>
+                <td><a href="https://www.linkedin.com/in/liam-biam-se/" target = "_blank">LinkedIn</a></td>
+            </tr>
+            
+            
+            </tbody>
+        </table><br>
+
+            <a href = "#top">Back to top</a><br>
+
+    <!-- download link using local file -->   
+        <h3 id = "S&C"><b>Skills & Competencies</b></h3>
+        
+            <ul>
+                <li> Python 3 Programming </li>
+                <li> Science and Maths Teaching </li>
+                <li> <a href="{% static 'docs/CV - Liam McIsaac 2023.pdf' %}" download>
+                    Download my CV for full details of my skills & competencies
+                </a> </li>
+            </ul>
+            
+            <a href = "#top">Back to top</a><br>
+
+    <!-- just a table -->   
+        <h3 id = "Education"><b>Education</b></h3>
+
+            <table class="education-table">
+                <tbody>
+                    <tr>
+                    <td><em>School</em></td>
+                    <td><em>Year</em></td>
+                    <td><em>Qualifications</em></td>
+                    </tr>
+                <tr>
+                    <td>Mundford Primary School</td>
+                    <td>1995-2001</td>
+                    <td>SATS</td>
+                </tr>
+                <tr>
+                    <td>Methwold High School</td>
+                    <td>2001-2007</td>
+                    <td>GCSEs</td>
+                </tr>
+                <tr>
+                    <td>King Edward VI School</td>
+                    <td>2007-2009</td>
+                    <td>A-Levels</td>
+                </tr>
+                <tr>
+                    <td>Durham University</td>
+                    <td>2009-2013</td>
+                    <td>BSc. (Hons)</td>
+                </tr>   
+                <tr>
+                    <td>IH Budapest</td>
+                    <td>2014-2014</td>
+                    <td>CELTA</td>
+                </tr>  
+                <tr>
+                    <td>University of East Anglia</td>
+                    <td>2017-2018</td>
+                    <td>PGCE</td>
+                </tr>  
+                <tr>
+                    <td>HyperionDev</td>
+                    <td>2022-2023</td>
+                    <td>Software Engineering Bootcamp</td>
+                </tr>             
+                </tbody>
+            </table><br>
+
+            <a href = "#top">Back to top</a><br>
+
+    <!-- just a table -->   
+        <h3 id = "Work experience"><b>Work experience</b></h3>
+
+        <table>
+            <tbody>
+                <tr>
+                <td><em>Position</em></td>
+                <td><em>Location</em></td>
+                <td><em>Year</em></td>
+                </tr>
+            <tr>
+                <td>Plumbing Assistant</td>
+                <td>Norfolk</td>
+                <td>2013-2014</td>
+            </tr>
+            <tr>
+                <td>English Teacher</td>
+                <td>Italy</td>
+                <td>2014-2015</td>
+            </tr>
+            <tr>
+                <td>English Teacher</td>
+                <td>2016-2018</td>
+                <td>Vietnam</td>
+            </tr>
+            <tr>
+                <td>Science and Maths Tutor</td>
+                <td>2018-2019</td>
+                <td>Vietnam</td>
+            </tr>  
+            <tr>
+                <td>Science Teacher</td>
+                <td>2019-2021</td>
+                <td>Online</td>
+            </tr>   
+            <tr>
+                <td>Science Teacher</td>
+                <td>2021-2022</td>
+                <td>London</td>
+            </tr>            
+            <tr>
+                <td>Science Tutor</td>
+                <td>2022-2022</td>
+                <td>Suffolk</td>
+            </tr>   
+            </tbody>
+        </table><br>
+
+        <a href = "#top">Back to top</a><br>
+
+    <!-- links to github projects, separated by line breaks -->   
+        <h3 id = "Projects"><b>Projects</b></h3>
+
+            <a href="https://github.com/liambiam/Task-38-CT1-hyperiondev" target = "_blank">NLP Entity Recognition</a><br>
+            <a href="https://github.com/liambiam/Task-38-CT2-hyperiondev" target = "_blank">NLP spaCy Semantics</a><br>
+            <a href="https://github.com/liambiam/OOP-Email-Client" target = "_blank">OOP Email Client</a><br>
+            <a href="https://github.com/liambiam/OOP-Stock-Viewer-Updater" target = "_blank">OOP Stock Viewer/Updater</a><br>    
+            <a href="https://github.com/liambiam/2D-Lists---Minesweeper-Generator" target = "_blank">2D Lists: Minesweeper Generator</a><br><br>
+
+            <a href = "#top">Back to top</a><br>
+        
+    <!-- no blogs to speak of--> 
+        <h3 id = "Blogs"><b>Blogs</b></h3>
+            I'm not a blogger :)
+        
+            <br><br><a href = "#top">Back to top</a><br>
+
+    <!-- would like to store and display on page, but it looks like i need to use php/js?-->   
+        <h3 id = "Logbook"><b>Visitor Logbook</b></h3>
+            <em>Please feel free to add your name and message!</em><br>
+            <form action="/action_page.php" method="post">
+                <label> Name: </label>
+                <input type = "text" name = "name"><br>
+                <label> Message:</label>
+                <input type = "text" name = "message"><br>
+                <label>Do you like the site?</label>
+                <select>
+                <option value = "yes" > Yes</option>
+                <option value = "no" > No</option>
+                </select>
+                <input type="submit" value="Submit" name = submit>
+            </form>
+            <br>
+    
+        
+    <!-- autoplay local audio file, muted -->           
+        <audio controls autoplay muted>
+            <source src="{% static 'media/遠くの愛好家.mp3' %}" type="audio/mpeg">
+            </audio> 
+    </div>        
+</body>
+
+</html>
