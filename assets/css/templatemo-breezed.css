@@ -163,7 +163,7 @@ a.main-stroked-button {
 
 a.main-stroked-button:hover {
   background-color: #fff;
-  color: #5fb759;
+  color: #4c49f1;
 }
 
 a.main-filled-button {
@@ -172,7 +172,7 @@ a.main-filled-button {
   padding: 13px 25px;
   background-color: #fff;
   text-transform: uppercase;
-  color: #5fb759;
+  color: #4c49f1;
   font-weight: 600;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s ease 0s;
@@ -183,14 +183,14 @@ a.main-filled-button {
 
 a.main-filled-button:hover {
   color: #fff;
-  background-color: #5fb759;
+  background-color: #4c49f1;
 }
 
 a.main-button-icon {
   font-size: 13px;
   border-radius: 25px;
   padding: 13px 25px;
-  background-color: #5fb759;
+  background-color: #4c49f1;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -222,7 +222,7 @@ button.main-button {
   padding: 10px 25px;
   background-color: #fff;
   text-transform: uppercase;
-  color: #5fb759;
+  color: #4c49f1;
   font-weight: 600;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s ease 0s;
@@ -233,7 +233,7 @@ button.main-button {
 
 button.main-button:hover {
   color: #fff;
-  background-color: #5fb759;
+  background-color: #4c49f1;
 }
 
 button.main-button-icon {
@@ -242,7 +242,7 @@ button.main-button-icon {
   font-size: 13px;
   border-radius: 25px;
   padding: 13px 25px;
-  background-color: #5fb759;
+  background-color: #4c49f1;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -286,7 +286,7 @@ a.text-button-icon i {
 }
 
 a.text-button-icon:hover {
-  color: #5fb759;
+  color: #4c49f1;
 }
 
 a.text-button-icon:hover i {
@@ -318,6 +318,7 @@ header
 --------------------------------------------- 
 */
 
+
 .background-header {
   background-color: #fff;
   height: 80px!important;
@@ -334,11 +335,11 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #5fb759!important;
+  color: #4c49f1!important;
 }
 
 .background-header .nav li a.active {
-  color: #5fb759!important;
+  color: #4c49f1!important;
 }
 
 .header-area {
@@ -399,7 +400,7 @@ header
 
 .header-area .main-nav .nav .search-icon a {
   background-color: #fff;
-  color: #5fb759;
+  color: #4c49f1;
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -419,7 +420,7 @@ header
 
 .header-area .main-nav .nav .search-icon a:hover {
   opacity: 1;
-  color: #5fb759!important;
+  color: #4c49f1!important;
 }
 
 .header-area .main-nav .nav li a {
@@ -450,7 +451,7 @@ header
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #5fb759!important;
+  color: #4c49f1!important;
   opacity: 1;
 }
 
@@ -511,7 +512,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #5fb759!important;
+  color: #4c49f1!important;
   padding-left: 25px;
 }
 
@@ -647,7 +648,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #5fb759;
+  color: #4c49f1;
 }
 
 @media (max-width: 1200px) {
@@ -872,7 +873,7 @@ banner
 
 .scroll-down a {
   display: inline-block;
-  background-color: #5fb759;
+  background-color: #4c49f1;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -973,7 +974,7 @@ about
 }
 
 #about .section-heading h6 {
-  color: #5fb759;
+  color: #4c49f1;
 }
 
 #about .service-item {
@@ -1197,7 +1198,7 @@ testimonials
   font-size: 14px;
   background-color: #fff;
   border-radius: 50%;
-  color: #5fb759;
+  color: #4c49f1;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1206,7 +1207,7 @@ testimonials
 
 #testimonials .item .hover-effect ul li a:hover {
   color: #fff;
-  background-color: #5fb759;
+  background-color: #4c49f1;
 }
 
 #testimonials .owl-carousel {
@@ -1260,7 +1261,7 @@ contact
 }
 
 #contact-us .section-heading h6 {
-  color: #5fb759;
+  color: #4c49f1;
 }
 
 #contact-us .left-text-content ul li {
@@ -1373,7 +1374,7 @@ footer .right-text-content ul li a {
   font-size: 14px;
   background-color: #fff;
   border-radius: 50%;
-  color: #5fb759;
+  color: #4c49f1;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1541,7 +1542,7 @@ search
   left: 50%;
   margin-top: 61px;
   margin-left: -45px;
-  background-color: #5fb759;
+  background-color: #4c49f1;
   border: black;
 }
 #search .close {
@@ -1550,7 +1551,7 @@ search
   top: 15px;
   right: 15px;
   color: #fff;
-  background-color: #5fb759;
+  background-color: #4c49f1;
   outline: none;
   opacity: 1;
   display: inline-block;
@@ -1602,7 +1603,7 @@ portfolio
 }
 #projects .filters ul li.active,
 #projects .filters ul li:hover {
-  color: #5fb759;
+  color: #4c49f1;
 }
 #projects .filters-content {
   margin-top: 50px;
@@ -1657,7 +1658,7 @@ portfolio
 }
 
 #projects .section-heading h6 {
-  color: #5fb759;
+  color: #4c49f1;
 }
 
 
